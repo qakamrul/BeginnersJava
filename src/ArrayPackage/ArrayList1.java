@@ -7,40 +7,56 @@ public class ArrayList1 {
 	public static void main(String[] args) {
 		
 		//ARRAY LIST
-		
 		ArrayList<Integer> number = new ArrayList<>();
-		System.out.println("Array size: " + number.size());
+		System.out.println("Initial Array Size: " + number.size());
 		
-		//Adding elements
+		//Adding array values
 		number.add(10);
 		number.add(20);
 		number.add(30);
 		number.add(40);
-		number.add(4, 50);
+		number.add(4,50);
 		
-		//System.out.println(number);
+		//Print Array values - OPTION 1
+		System.out.println("Print Array values - Option 1: " + number);
 		
-		//Array List value can be print with FOR EACH LOOP
-		/*for(int x : number) {
+		//Print Array values - OPTION 2: For Each Loop
+		System.out.print("Print Array values - Option 2: ");
+		for(int x : number) {
+			
 			System.out.print(x + ", ");
-		}*/
+		}
 		
-		//Array List value can also be print with ITERATOR METHOD
+		//Print Array values - OPTION 3: ITERATOR
 		Iterator<Integer> itr = number.iterator();
+		System.out.print("\nPrint Array values - Option 3: ");
 		
-		System.out.print("Array Elements: ");
 		while(itr.hasNext()) {
 			
 			System.out.print(itr.next() + ", ");
 		}
 		
-		System.out.println("\nArray size: " + number.size());
+		//FEW METHODS OF ARRAY LIST CLASS
 		
-		//REMOVE Elements from ArrayList index AND Then PRINT
-		number.remove(2);
-		System.out.println("After Removing: " + number);
+		int arraySize = number.size();
+		System.out.println("\n\nSize of this Array is: " + arraySize);
 		
-		number.removeAll(number);
-		System.out.println("After Remove All Elements: " + number);
+		boolean empty = number.isEmpty();
+		System.out.println("Is this Array Empty?: " + empty);
+		
+		boolean contain = number.contains(30);
+		System.out.println("Is 30 contains in this Array?: " + contain);
+		
+		number.remove(3);
+		System.out.println("After removing 3rd Index value: " + number);
+		
+		int x = number.get(2);
+		System.out.println("Get index 2 value: " + x);
+		
+		int y = number.lastIndexOf(20);
+		System.out.println("Get index of value 20: " + y);
+		
+		number.set(3, 40);
+		System.out.println("Set/Edit/modify 3rd index value with 40: " + number);
 	}
 }
