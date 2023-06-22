@@ -58,5 +58,9 @@ public class ArrayList1 {
 		
 		number.set(3, 40);
 		System.out.println("Set/Edit/modify 3rd index value with 40: " + number);
+		
+		number.removeAll(number);
+		System.out.println("After removing all values from Array: " + number);
+		System.out.println("Array Size after remove all: " + number.size());
 	}
 }
