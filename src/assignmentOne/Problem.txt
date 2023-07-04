@@ -1,0 +1,21 @@
+BANK ACCOUNT:
+=============
+Write a complete java code based on the given scenario-
+
+● Write a class named “Account” having the attributes named id, name and balance. Use
+constructor to initialize the required attributes.
+
+● Write a method where account name will be checked. If account name is “Current
+account”, then 500 BDT will be assigned to balance. And 100 BDT will be assigned for
+other accounts.
+
+● Write a method where money can be deposited. The deposited amount will be added to
+the balance. Here, balance = balance + deposited amount.
+
+● Write a method where money can be withdrawn. The withdrawal amount will be
+deducted from balance. Before withdrawal, you have to consider that remaining balance
+(after withdrawal) must be minimum 1000 BDT. Here, balance = balance – withdrawal
+amount.
+
+● From the main method of main class, call all the methods by initializing object of
+Account class. Deposited and withdrawn amount must be taken from user as input.

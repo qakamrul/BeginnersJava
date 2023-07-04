@@ -21,7 +21,6 @@ public class WrapperClass {
 		
 		Double d = new Double(10.5);
 		double dd = d; //d.doubleValue() - Auto-Unboxing
-		System.out.println(dd);
-		
+		System.out.println(dd);	
 	}
 }
