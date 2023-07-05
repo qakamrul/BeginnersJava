@@ -28,8 +28,6 @@ public class Account {
 	//Account Check Method
 	void AccountCheck(String accName) {
 		
-		this.name = accName;
-		
 		if(accName.contains("Current")) {
 			this.balance = 500;
 		}
