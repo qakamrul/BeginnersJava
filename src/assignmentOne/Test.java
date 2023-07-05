@@ -8,21 +8,17 @@ public class Test {
 		//Taking input from user
 		Scanner input = new Scanner(System.in);
 		int userID = 0;
-		String userName;
-		double accBalance = 0;
+		String accName;
 		
 		System.out.print("Please Enter your ID: ");
 		userID = input.nextInt();
 		
 		System.out.print("Please Enter your Name: ");
-		userName = input.next();
-		
-		System.out.print("Please Enter Account Balance: "); 
-		accBalance = input.nextDouble();
-		
+		accName = input.next();
 		
 		//Create the Object of Account class
-		Account account = new Account(userID, userName, accBalance);
+		Account account = new Account(userID, accName);
+		account.AccountCheck(accName);
 		
 		System.out.println("\nYour Account Information is as below: ");
 		System.out.println("-------------------------------------");

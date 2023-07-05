@@ -4,7 +4,7 @@ public class Account {
 
 	private int id;
 	private String name;
-	private double balance;
+	private double balance = 0;
 	
 	public Account() {
 		//This is default constructor
@@ -12,29 +12,34 @@ public class Account {
 	}
 	
 	//This is a parameterized constructor
-	public Account(int id, String name, double balance) {
+	public Account(int id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.balance = balance;
 	}
 
 	//Getter, Setter NOT added as not using in this project
 	
 	@Override
 	public String toString() {
-		return "User Id: " + id + "\nUser Name: " + name + "\nAccount Balance: " + balance + " BDT";
+		return "User Id: " + id + "\nAccount Name: " + name + "\nAccount Balance: " + balance + " BDT";
 	}
 	
 	//Account Check Method
 	void AccountCheck(String accName) {
 		
-		if(accName == "Current") {
+		this.name = accName;
+		
+		if(accName.contains("Current")) {
+			this.balance = 500;
+		}
+		else if(accName.contains("current")) {
 			this.balance = 500;
 		}
 		else {
 			this.balance = 100;
 		}
+		
 	}
 	
 	//Deposit Method
