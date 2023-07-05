@@ -28,10 +28,7 @@ public class Account {
 	//Account Check Method
 	void AccountCheck(String accName) {
 		
-		if(accName.contains("Current")) {
-			this.balance = 500;
-		}
-		else if(accName.contains("current")) {
+		if(accName.contains("Current") || accName.contains("current")) {
 			this.balance = 500;
 		}
 		else {
